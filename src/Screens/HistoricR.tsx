@@ -35,7 +35,7 @@ var BitList=Object.entries(Myobject)
         
         <>
         <p className='text-xl font-semibold'>( From {query.get("start")} To {query.get("end")} )</p>
-        {BitList.map(x=>{return <li>{x[1]}</li>})}
+        <ul>{BitList.map(x=>{return <li>{x[0]} - {x[1]?.toLocaleString(undefined, {minimumFractionDigits: 2})} THB</li>})}</ul>
         </>
       )
     }
